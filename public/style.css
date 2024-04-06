@@ -1,0 +1,285 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* navbar section */
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+    color: white;
+    height: 8vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+#navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-items {
+    margin: 0;
+    padding: 0 3rem;
+}
+.nav-items a {
+    font-family: 'Baloo Bhaina 2';
+    text-decoration: none;
+    color: white;
+    padding: 1px 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    transition: color 500ms ease-in-out;
+    transition: background-color 500ms ease-in-out;
+}
+
+/* .nav-items a:hover {
+    background-color: white;
+    color: black;
+} */
+
+/* Home section */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+
+    background: url('media/background.jpg') no-repeat center center/cover;
+}
+
+#home h1 {
+    font-family: 'Courgette';
+}
+
+#home h3 {
+    font-family: 'Handlee';
+}
+
+.home-child {
+    color: white;
+}
+
+.imgbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+}
+
+.home-child img {
+    width: 8rem;
+    filter: invert();
+}
+
+/* Services section */
+
+#services {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.services-child {
+    color: white;
+    width: 100vw;
+    height: auto;
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+
+    background: url('media/services-background.jpg') no-repeat center center/cover;
+}
+
+.services-types {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.service {
+    width: 26vw;
+}
+
+.service img {
+    width: 5rem;
+    filter: invert();
+}
+
+/* Work section */
+#work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-child {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.work-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.work-images img {
+    height: 15rem;
+    width: 20rem;
+}
+
+/* About section */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-child {
+    width: 100vw;
+    height: auto;
+    margin-top: 2rem;
+
+    background: url('media/about-background.jpg') no-repeat center center/cover;
+}
+
+.about-child p {
+    margin: 0 10rem;
+}
+
+/* Contact section */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-child {
+    width: 100vw;
+    height: auto;
+    margin-top: 2rem;
+
+    background: url('media/contact-background.jpg') no-repeat center center/cover;
+}
+
+.contact-child h1 {
+    color: white;
+}
+
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+.form-group input, 
+.form-group textarea {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+}
+
+/* Footer section */
+footer {
+    background-color: black;
+    color: white;
+}
+
+/* Utility class */
+.center-text {
+    text-align: center;
+    padding: 1rem;
+}
+
+.h-primary {
+    font-family: 'Kalam', sans-serif;
+    font-size: 40px;
+}
+
+.h-secondary {
+    font-family: 'Montserrat';
+}
+
+.sub-text {
+    font-family: 'Baloo Bhaina 2';
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1054px) {
+    .work-images {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 822px) {
+    .nav-items {
+        padding: 0 1rem;
+    }
+
+    .about-child p {
+        margin: 0 5rem;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .nav-items a {
+        font-size: 14px;
+    }
+
+    .work-images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-child p {
+        margin: 0 4rem;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .nav-items {
+        padding: 0 4px;
+    }
+    
+    .services-types {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 70vw;
+    }
+
+    .about-child p {
+        margin: 0 1rem;
+    }
+}
